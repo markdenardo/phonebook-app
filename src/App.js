@@ -23,31 +23,7 @@ const App = () => {
         setPersons(persons.concat(personObject))
         setNewName('')
       }
-
-      console.log('personObject',personObject)
       
-    
-      // switch(newName){
-        
-      //   case persons.includes(newName) === true :
-      //   {alert(`${newName} is already added to phonebook`)}
-      //   break
-
-      //   case '' :
-      //   alert('please add a name')
-      //   break
-
-      //   default:
-        
-      //   setPersons(persons.concat(personObject))
-      //   setNewName('')
-      // }
-     
-       
-  
-     
-    
-
   }
 
   const handleNameChange = (event) => {

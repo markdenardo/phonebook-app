@@ -8,14 +8,45 @@ const App = () => {
 
   const addNewPerson = (event) => {
       
-   event.preventDefault()
+    event.preventDefault()
+
       const personObject = {
         name: newName
       }
+
+      if (newName === ''){
+        alert('please enter a name')
+      }
+      else if (persons.filter(e => e.name === newName)) {
+        alert(`${newName} is already added to phonebook`)
+      } else if (persons.filter(e => e.name !== newName)){
+        setPersons(persons.concat(personObject))
+        setNewName('')
+      }
+
+      console.log('personObject',personObject)
+      
     
-    console.log('personObject',personObject)
-    setPersons(persons.concat(personObject))
-    setNewName('')
+      // switch(newName){
+        
+      //   case persons.includes(newName) === true :
+      //   {alert(`${newName} is already added to phonebook`)}
+      //   break
+
+      //   case '' :
+      //   alert('please add a name')
+      //   break
+
+      //   default:
+        
+      //   setPersons(persons.concat(personObject))
+      //   setNewName('')
+      // }
+     
+       
+  
+     
+    
 
   }
 
